@@ -9,11 +9,13 @@ const blackTextColor = Color.fromRGBO(0, 0, 0, 1);
 const whiteTextColor = Color.fromRGBO(255, 255, 255, 1);
 const orangeColor = Color.fromRGBO(255, 114, 71, 1);
 
-
 ThemeData themeData = ThemeData(
   brightness: Brightness.light,
   useMaterial3: true,
   fontFamily: 'SFProText',
+  textSelectionTheme: const TextSelectionThemeData(
+    selectionHandleColor: greyColor,
+  ),
 );
 
 TextStyle regular17 = const TextStyle(

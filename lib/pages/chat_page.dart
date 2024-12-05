@@ -117,6 +117,7 @@ class _ChatPageState extends State<ChatPage> with WidgetsBindingObserver {
                       maxLines: 6,
                       minLines: 1,
                       textAlignVertical: TextAlignVertical.center,
+                      cursorColor: greyColor,
                       decoration: InputDecoration(
                         contentPadding: EdgeInsets.fromLTRB(
                           13.0.w,
@@ -126,7 +127,7 @@ class _ChatPageState extends State<ChatPage> with WidgetsBindingObserver {
                         ),
                         hintText: 'iMessage',
                         hintStyle: regular17.copyWith(color: greyColor),
-                        border: OutlineInputBorder(
+                                                border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12.0.w),
                           borderSide: const BorderSide(color: greyColor),
                         ),
