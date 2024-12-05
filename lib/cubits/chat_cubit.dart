@@ -15,7 +15,7 @@ class ChatCubit extends Cubit<ChatState> {
     messageController.addListener(showSendButton);
   }
 
-  final int secondsToDelete = 10;
+  final int secondsToDelete = 60;
   final List<String> receivers = ['Max Payne', 'Mona Sax'];
   final TextEditingController messageController = TextEditingController();
   final ScrollController scrollController = ScrollController();
