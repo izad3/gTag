@@ -51,11 +51,13 @@ class ChatCubit extends Cubit<ChatState> {
       isTimerEnabled: false,
     ));
 
-    scrollController.animateTo(
-      scrollController.position.maxScrollExtent,
-      duration: const Duration(milliseconds: 300),
-      curve: Curves.easeInOut,
-    );
+    Future.delayed(const Duration(milliseconds: 200), () {
+      scrollController.animateTo(
+        scrollController.position.maxScrollExtent,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+      );
+    });
 
     Future.delayed(const Duration(milliseconds: 500), () {
       emit(state.copyWith(
