@@ -1,0 +1,42 @@
+name: gamer_tag_task
+description: "A new Flutter project."
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  equatable: ^2.0.7
+  flutter_bloc: ^8.1.6
+  flutter_svg: ^2.0.16
+  uuid: ^4.5.1
+  intl: ^0.20.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/icons/
+
+  fonts:
+    - family: SFProText
+      fonts:
+        - asset: assets/fonts/SFProText/SF-Pro-Text-Medium.otf
+          weight: 500
+        - asset: assets/fonts/SFProText/SF-Pro-Text-Regular.otf
+          weight: 400

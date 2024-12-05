@@ -1,0 +1,4 @@
+enum ChatContainerType {
+  send,
+  receive,
+}
