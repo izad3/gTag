@@ -116,6 +116,7 @@ class _ChatPageState extends State<ChatPage> with WidgetsBindingObserver {
                       keyboardType: TextInputType.multiline,
                       maxLines: 6,
                       minLines: 1,
+                      textAlignVertical: TextAlignVertical.center,
                       decoration: InputDecoration(
                         contentPadding: EdgeInsets.fromLTRB(
                           13.0.w,
@@ -126,14 +127,32 @@ class _ChatPageState extends State<ChatPage> with WidgetsBindingObserver {
                         hintText: 'iMessage',
                         hintStyle: regular17.copyWith(color: greyColor),
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0),
+                          borderRadius: BorderRadius.circular(12.0.w),
+                          borderSide: const BorderSide(color: greyColor),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12.0.w),
                           borderSide: const BorderSide(color: greyColor),
                         ),
                         suffixIcon: state.showSendButton
-                            ? IconButton(
-                                onPressed: chatCubit.addMessage,
-                                icon: const Icon(Icons.send))
+                            ? Padding(
+                              padding: EdgeInsets.only(right: 4.0.w),
+                              child: GestureDetector(
+                                onTap: chatCubit.addMessage,
+                                child: SvgViewer(
+                                    source: 'assets/icons/arrow-up.svg',
+                                    size: 32.0.w,
+                                    fit: BoxFit.fill,
+                                  ),
+                              ),
+                            )
                             : null,
+                        suffixIconConstraints: BoxConstraints(
+                          minHeight: 32.0.w,
+                          minWidth: 36.0.w,
+                          maxHeight: 32.0.w,
+                          maxWidth: 36.0.w,
+                        ),
                       ),
                     ),
                   ],
